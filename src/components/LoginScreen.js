@@ -10,7 +10,7 @@ const LoginScreen = ({ onLogin }) => {
     const result = onLogin(loginForm.username, loginForm.password);
     
     if (!result.success) {
-      setLoginError(result.error);
+      setLoginError('Username or Password Incorrect! Please try again.');
     } else {
       setLoginForm({ username: '', password: '' });
     }
@@ -72,7 +72,7 @@ const LoginScreen = ({ onLogin }) => {
 
           <button
             onClick={handleSubmit}
-            className="w-full bg-calm-green-gradient text-black font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            className="w-full bg-calm-green-gradient text-black font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Log In
           </button>
